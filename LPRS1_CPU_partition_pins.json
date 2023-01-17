@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[10]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[11]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[12]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[13]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[14]",
+					"strict" : false
+				},
+				{
+					"name" : "oLED[15]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "onCOL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oMUX_ROW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oMUX_ROW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oMUX_ROW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oMUX_COLOR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oMUX_COLOR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iCLK",
+					"strict" : false
+				},
+				{
+					"name" : "inRST",
+					"strict" : false
+				},
+				{
+					"name" : "iPB_LEFT",
+					"strict" : false
+				},
+				{
+					"name" : "iPB_UP",
+					"strict" : false
+				},
+				{
+					"name" : "iPB_DOWN",
+					"strict" : false
+				},
+				{
+					"name" : "iPB_RIGHT",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

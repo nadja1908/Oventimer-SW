@@ -1,0 +1,18 @@
+Fitter Status : Successful - Mon Jan 16 13:26:40 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : LPRS1_CPU
+Top-level Entity Name : top
+Family : MAX 10
+Device : 10M16SAU169C8G
+Timing Models : Final
+Total logic elements : 6,467 / 15,840 ( 41 % )
+    Total combinational functions : 4,114 / 15,840 ( 26 % )
+    Dedicated logic registers : 4,678 / 15,840 ( 30 % )
+Total registers : 4678
+Total pins : 35 / 130 ( 27 % )
+Total virtual pins : 0
+Total memory bits : 0 / 562,176 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 90 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

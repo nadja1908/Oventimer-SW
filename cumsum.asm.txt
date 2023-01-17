@@ -1,0 +1,160 @@
+/*
+		
+		short* p_frame_sync = 0x140;
+		short* p_7segm = 0x180;
+		
+*/
+.data
+5
+0             ;;frame cnt
+10000         ;;frame per hb
+0x180
+0x140
+0
+0
+9
+0
+
+.text 
+/*
+		Spisak registara:
+		R0 - temp
+		R1 - h
+		R2 - s
+		R3 - d
+		R4 - j
+		R5 - 9
+		R6 - p_frame_sync
+		R7 - p_7segm
+		
+*/
+		
+		
+begin:
+
+		;; Postavljamo pokazivace i boje.
+		inc R0, R0								;; addr = 1
+		inc R0, R0								;; addr = 2
+		inc R0, R0								;; addr = 3
+		ld R7, R0								;; R7 <- p_7segm = 0x180
+		inc R0, R0								;; addr = 4
+		ld R6, R0								;; R6 <- p_frame_sync = 0x140;
+		
+		shl R0, R0                                                           ;; R5 = 4 + 4
+		inc R5, R0								;; R5 = 9 upisali smo 9 u R5
+		
+		/*sub R0, R0, R0
+		ld R0, R0
+		ld R1, R0 ;; 0
+		inc R0, R0
+		ld R2, R0 ;; 0
+		inc R0, R0
+		ld R3, R0 ;; 0
+		inc R0, R0
+		ld R4, R0 ;; 0  */
+		
+frame_sync_rising_edge:
+frame_sync_wait_0:
+		ld R0, R6								;; R0 <- p_frame_sync
+		jmpnz frame_sync_wait_0
+frame_sync_wait_1:
+		ld R0, R6								;; R0 <- p_frame_sync
+		jmpnz frame_sync_wait_1
+		
+			
+
+		sub R0, R0, R0
+		ld  R0, R0
+		ld  R1, R0
+		inc R0, R0
+		ld  R2, R0
+		inc R0, R0
+		ld  R3, R0
+		inc R0, R0
+		ld  R4, R0
+		
+		sub R0, R0, R0
+		
+		or  R0, R0, R1
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		or  R0, R0, R2
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		or  R0, R0, R3
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		shl R0, R0
+		or  R0, R0, R4							;; R0 = hhhhssssddddjjjj
+		
+		st R0, R7
+		
+count_frames_begin:
+		sub R0, R0, R0							;; addr = 0, prva adresa data
+		inc R0, R0
+		ld R1, R0							;; R1 <- frame_cnt 0 
+		inc R0, R0
+		ld R2, R0							;; R1 <- frame_per_heartbeat 50000
+		dec R0, R0
+		inc R1, R1							;; frame_cnt ++ 
+		sub R2, R2, R1							;; frame_cnt == frames_per_heartbeat
+		jmpz count_frames_heatbeat			                ;; jump if equal, dosli smo do 40000 skace
+		st R1, R0							;; R1 -> frame_cnt
+		jmp frame_sync_rising_edge
+count_frames_heatbeat:
+		sub R1, R1, R1
+		st R1, R0							;; R1 0 -> frame_cnt, resetovan ide u R0
+		
+count_frames_end:
+
+		sub R0, R0, R0
+		ld  R0, R0
+		ld  R1, R0
+		inc R0, R0
+		ld  R2, R0
+		inc R0, R0
+		ld  R3, R0
+		inc R0, R0
+		ld  R4, R0
+		
+		dec R4, R4								;; jedinica --
+		st  R4, R0
+		jmps reset_j
+		jmp frame_sync_rising_edge
+		
+reset_j:
+		mov R4, R5								;; jedinica = 9
+		st  R4, R0
+		dec R3, R3								;; desetica --
+		dec R0, R0
+		st  R3, R0
+		jmps reset_d
+		jmp frame_sync_rising_edge
+		
+reset_d:
+		mov R3, R5								;; desetica = 9
+		st  R3, R0
+		dec R2, R2								;; stotina --
+		dec R0, R0
+		st  R2, R0
+		jmps reset_s
+		jmp frame_sync_rising_edge
+
+reset_s:
+		mov R2, R5								;; stotina = 9
+		st  R2, R0
+		dec R1, R1								;; hiljada --
+		dec R0, R0
+		st  R1, R0
+		jmps reset_h
+		jmp frame_sync_rising_edge
+
+reset_h:
+		mov R1, R5
+		st  R1, R0
+		jmp frame_sync_rising_edge

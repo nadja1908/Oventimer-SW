@@ -1,0 +1,156 @@
+Flow report for LPRS1_CPU
+Mon Jan 16 13:27:00 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon Jan 16 13:27:00 2023       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; LPRS1_CPU                                   ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M16SAU169C8G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 6,467 / 15,840 ( 41 % )                     ;
+;     Total combinational functions  ; 4,114 / 15,840 ( 26 % )                     ;
+;     Dedicated logic registers      ; 4,678 / 15,840 ( 30 % )                     ;
+; Total registers                    ; 4678                                        ;
+; Total pins                         ; 35 / 130 ( 27 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 562,176 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 90 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/16/2023 13:24:09 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; LPRS1_CPU           ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                      ;
++----------------------------------------+----------------------------------------+--------------------------------------+-------------+----------------+
+; Assignment Name                        ; Value                                  ; Default Value                        ; Entity Name ; Section Id     ;
++----------------------------------------+----------------------------------------+--------------------------------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                  ; 62488684982913.167387184911781         ; --                                   ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME               ; NA                                     ; --                                   ; --          ; top_tb         ;
+; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; top_tb_run.do                          ; --                                   ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; top_tb                                 ; --                                   ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                 ; Vhdl                                   ; --                                   ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                    ; ModelSim-Altera (VHDL)                 ; <None>                               ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS           ; TEST_BENCH_MODE                        ; --                                   ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                    ; src/hdl/top_tb.vhd                     ; --                                   ; --          ; top_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME             ; top_tb                                 ; --                                   ; --          ; top_tb         ;
+; EDA_TEST_BENCH_NAME                    ; top_tb                                 ; --                                   ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR             ; 1 us                                   ; --                                   ; --          ; top_tb         ;
+; EDA_TIME_SCALE                         ; 1 ps                                   ; --                                   ; --          ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER             ; On                                     ; Off                                  ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                 ; 85                                     ; --                                   ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                 ; 0                                      ; --                                   ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE            ; 3.3V                                   ; --                                   ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS                ; 4                                      ; --                                   ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS         ; Half Signal Swing                      ; --                                   ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS         ; Half Signal Swing                      ; --                                   ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS        ; Half Vccio                             ; --                                   ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS        ; Half Vccio                             ; --                                   ; --          ; --             ;
+; PARTITION_COLOR                        ; -- (Not supported for targeted family) ; --                                   ; top         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL    ; -- (Not supported for targeted family) ; --                                   ; top         ; Top            ;
+; PARTITION_NETLIST_TYPE                 ; -- (Not supported for targeted family) ; --                                   ; top         ; Top            ;
+; POWER_BOARD_THERMAL_MODEL              ; None (CONSERVATIVE)                    ; --                                   ; --          ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE     ; 12.5 %                                 ; 12.5%                                ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                                   ; --          ; --             ;
+; PROJECT_IP_REGENERATION_POLICY         ; ALWAYS_REGENERATE_IP                   ; SKIP_REGENERATING_IP_IF_HDL_MODIFIED ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY               ; output_files                           ; --                                   ; --          ; --             ;
+; TOP_LEVEL_ENTITY                       ; top                                    ; LPRS1_CPU                            ; --          ; --             ;
+; VCCA_USER_VOLTAGE                      ; 3.3V                                   ; --                                   ; --          ; --             ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES         ; Off                                    ; --                                   ; --          ; --             ;
++----------------------------------------+----------------------------------------+--------------------------------------+-------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 985 MB              ; 00:00:42                           ;
+; Fitter               ; 00:01:59     ; 1.2                     ; 1695 MB             ; 00:02:49                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 853 MB              ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:07     ; 2.3                     ; 1302 MB             ; 00:00:14                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.4                     ; 934 MB              ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1080 MB             ; 00:00:01                           ;
+; Total                ; 00:02:46     ; --                      ; --                  ; 00:04:02                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
+; Fitter               ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
+; Assembler            ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
+; Power Analyzer       ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
+; Timing Analyzer      ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; rtrkf007-lin     ; Ubuntu 18.04.6 ; 18         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off LPRS1_CPU -c LPRS1_CPU
+quartus_fit --read_settings_files=off --write_settings_files=off LPRS1_CPU -c LPRS1_CPU
+quartus_asm --read_settings_files=off --write_settings_files=off LPRS1_CPU -c LPRS1_CPU
+quartus_pow --read_settings_files=off --write_settings_files=off LPRS1_CPU -c LPRS1_CPU
+quartus_sta LPRS1_CPU -c LPRS1_CPU
+quartus_eda --read_settings_files=off --write_settings_files=off LPRS1_CPU -c LPRS1_CPU
+
+
+
